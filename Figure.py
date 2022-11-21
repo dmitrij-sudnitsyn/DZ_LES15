@@ -15,6 +15,8 @@ class Figure:
  def __str__(self) -> str:
     return f"Фигура {self.name}; c площадью: {self.getQuare()}"       
 
+
+# Класс прямоугольник
 class RegTangle(Figure):
   def __init__(self, name,a,b):
     self.a,self.b=a,b
@@ -53,6 +55,41 @@ class RegTangle(Figure):
 
   def getQuare(self):  
      return self.guare
+
+# Класс круг
+class Circle(Figure):
+  def __init__(self, name,r):
+   self.r=r
+   super().__init__(name)     
+ 
+  def __str__(self) -> str:
+   return f"Фигура {self.name};  с радиусом {self.r} имеет площадь площадью: {self.getQuare()}" 
+
+  def __int__(self):
+   try:
+    return int(self.guare)
+   except ValueError:
+    return print(f"Значение {self.guare} не численное")
+
+ 
+  def set(self,name,r):
+   self.r=r
+   super().__init__(name) 
+
+  def getR(self):
+   return self.r
+
+  def setR(self,r):
+   self.r=r
+   
+  def getQuare(self):  
+     self.guare=3.13*self.r*self.r
+     return self.guare
+
+# Класс прямоугольный треугольник
+class RightTriangle():
+   pass
+
 
 
   
