@@ -19,7 +19,6 @@ from Figure import *
 # b=int(myRightTriangle)
 # print(b)
 
-
 mytrapetsiya=trapetsiya("Трапеция",60,40,40,40)
 print(mytrapetsiya)
 b=int(mytrapetsiya)
