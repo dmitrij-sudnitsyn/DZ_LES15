@@ -1,3 +1,4 @@
+import math
 class Figure:
  def __init__(self,name):
     self.name=name
@@ -87,8 +88,60 @@ class Circle(Figure):
      return self.guare
 
 # Класс прямоугольный треугольник
-class RightTriangle():
-   pass
+class RightTriangle(RegTangle):
+   def __init__(self, name, a, b):
+     super().__init__(name, a, b)
+
+   def __str__(self) -> str:
+     return f"Фигура {self.name};  с длиной катетом А {self.getStoronA()} и катетом {self.getStoronA()} имеет площадь площадью: {self.getQuare()}"       
+
+   def __int__(self):
+     return super().__int__()  
+
+   def getQuare(self):  
+     self.guare=self.a*self.b/2
+     return self.guare
+   
+
+class trapetsiya(RegTangle):   
+   def __init__(self, name, a, b,d,c):
+     self.c=c
+     self.d=d     
+     super().__init__(name, a, b)
+     p=(self.a+self.b+self.c+self.d)/2
+     sa=(self.a+self.b)/(abs(self.a-self.b))
+     sb=math.sqrt((p-self.a)*(p-self.b)*(p-self.a-self.c)*(p-self.a-self.b))
+     self.guare=sa*sb
+
+
+   def getA(self):
+    return self.a
+
+   def getB(self):
+    return self.b
+
+   def getC(self):
+    return self.c
+
+   def getD(self):
+    return self.d
+
+   def getQuare(self):
+    #  формула Герона
+    p=(self.a+self.b+self.c+self.d)/2
+    sa=(self.a+self.b)/(abs(self.a-self.b))
+    sb=math.sqrt((p-self.a)*(p-self.b)*(p-self.a-self.c)*(p-self.a-self.b))
+    self.guare=sa*sb
+    return self.guare
+
+   def __str__(self) -> str:
+     return f"Фигура {self.name};  с длиной сторон {self.getA()} , {self.getB()} , {self.getD()} , {self.getC()} имеет площадь площадью: {self.getQuare()}"    
+
+   def __int__(self):
+     return super().__int__()  
+     
+
+     
 
 
 
