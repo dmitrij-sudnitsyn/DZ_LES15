@@ -19,9 +19,15 @@ from Figure import *
 # b=int(myRightTriangle)
 # print(b)
 
-mytrapetsiya=trapetsiya("Трапеция",60,40,40,40)
-print(mytrapetsiya)
-b=int(mytrapetsiya)
+# mytrapetsiya=trapetsiya("Трапеция",60,40,40,40)
+# print(mytrapetsiya)
+# b=int(mytrapetsiya)
+# print(b)
+# 60 40 40 40  1936.49
+
+myCircle=Circle("Круг",10)
+print(myCircle)
+b=int(myCircle)
 print(b)
 
-# 60 40 40 40  1936.49
+
