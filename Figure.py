@@ -10,7 +10,9 @@ class Figure:
  def setName(self,name):
     self.name=name
 
+
  def getQuare(self):
+    self.guare=0
     return self.guare
 
  def __str__(self) -> str:
@@ -54,7 +56,9 @@ class RegTangle(Figure):
     self.a=b
     super().guare=self.a*b
 
+
   def getQuare(self):  
+     self.guare=self.a*self.b
      return self.guare
 
 # Класс круг

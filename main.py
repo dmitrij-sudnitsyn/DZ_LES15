@@ -3,6 +3,7 @@
 # круг, прямоугольный треугольник, трапеция со своими 
 # методами для подсчета площади.
 from Figure import *
+from Shape import *
 
 # myRegTangle=RegTangle("Квадрат",4,4)
 # print(myRegTangle)
@@ -25,9 +26,18 @@ from Figure import *
 # print(b)
 # 60 40 40 40  1936.49
 
-myCircle=Circle("Круг",10)
-print(myCircle)
-b=int(myCircle)
-print(b)
+# myCircle=Circle("Круг",10)
+# print(myCircle)
+# b=int(myCircle)
+# print(b)
 
+def myshape_fun():
+  myshape= shape("Квадрат: ",10,60) 
+  myshape.save()
+  lst=myshape.load()
+  print(lst)
+  myshape.show()
+
+
+myshape_fun()  
 
