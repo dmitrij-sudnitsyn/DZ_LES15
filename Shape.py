@@ -33,7 +33,11 @@ class shape:
 # тами верхнего левого угла и размерами;
 
 class Rectangle(shape):
-  pass
+  def __init__(self, name, a, b) -> None:
+    super().__init__(name, a, b)
+  def show(self):
+    print(f"show Фигура {self.name} {self.a} {self.b}")
+       
 # ■■Circle — окружность с заданными координатами цен-
 # тра и радиусом;
 # ■■ Ellipse — эллипс с заданными координатами верхнего
